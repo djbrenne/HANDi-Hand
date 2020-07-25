@@ -38,9 +38,9 @@ english, % ngerman for German
 %parskip, % Uncomment to add space between paragraphs
 %nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
-%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
-openany % Comment out to have chapters, acknowledgements, etc. always start on a right-hand page (creates blank pages where necessary)
+openany, % Comment out to have chapters, acknowledgements, etc. always start on a right-hand page (creates blank pages where necessary)
 ]{Manual} % The class file specifying the document structure
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -55,7 +55,7 @@ openany % Comment out to have chapters, acknowledgements, etc. always start on a
 \usepackage{caption}
 \floatstyle{plaintop}
 \restylefloat{table}
-
+\usepackage{longtable}
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -121,7 +121,7 @@ August 2020
 \addchaptertocentry{Introduction} % Add the abstract to the table of contents
 The HANDi Hand is an open-source robotic platform specifically designed for machine learning research in prosthetic control. The inexpensive and easily modifiable hardware allows versatility for research studies, and the suite of sensors provides valuable information for machine learning and prosthetics research.
 
-The open-source release provides all solid-modelling files, .stl files, Arduino code, and assembly instruction required to construct a fully functional HANDi Hand, and should also give the maker enough flexibility to make alterations to the design as necessary to suit their own needs. Both left and right hand versions are available. To contact the original designers, or to receive support for your build, please visit BLINCdev.ca.
+The open-source release provides all solid-modelling files, .stl files, Arduino code, and assembly instruction required to construct a fully functional HANDi Hand, and should also give the maker enough flexibility to make alterations to the design as necessary to suit their own needs. Both left and right hand versions are available. To contact the original designers, or to receive support for your build, please visit  \href{https://blincdev.ca/}{BLINCdev.ca}.
 
 This assembly manual outlines all the information required to print and source parts, and assemble the HANDi Hand as currently designed. The hand takes an estimated 30 hours to build.
 
@@ -138,7 +138,7 @@ This assembly manual outlines all the information required to print and source p
 
 
 %----------------------------------------------------------------------------------------
-%	ABBREVIATIONS
+%	DEFINITIONS
 %----------------------------------------------------------------------------------------
 \newpage
 \addchaptertocentry{Glossary of Terms}
@@ -172,7 +172,7 @@ An example part name would be \textbf{IP-P Pivot R}, for the proximal portion of
 
 
 %----------------------------------------------------------------------------------------
-%	MAIN CONTENT - STEPS
+%	MAIN CONTENT 
 %----------------------------------------------------------------------------------------
 
 \mainmatter % Begin numeric (1,2,3...) page numbering
@@ -182,7 +182,16 @@ An example part name would be \textbf{IP-P Pivot R}, for the proximal portion of
 % Include the steps of assembly as separate files from the Steps folder
 % Uncomment the lines as you write the chapters
 
-%\include{Steps/Step1}
+\include{Sections/required_materials}
+%\include{Sections/flowchart}
+%\include{Sections/material_preparation}
+%\include{Sections/thumb_assembly}
+%\include{Sections/finger_assembly}
+%\include{Sections/servo_installation}
+%\include{Sections/signal_board}
+%\include{Sections/ventral_palm}
+%\include{Sections/palm_grips}
+%\include{Sections/wiring}
 
 
 %----------------------------------------------------------------------------------------
@@ -193,7 +202,7 @@ An example part name would be \textbf{IP-P Pivot R}, for the proximal portion of
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-%\include{Appendices/AppendixA}
+%\include{Sections/appendix_a}
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
 
