@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dylan Brenneis - HANDi-Hand Assembly Manual
+% 
+% Drafted using the following template, modified for this manual:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.5 (27/8/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+english, % ngerman for German
+% Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+openany % Comment out to have chapters, acknowledgements, etc. always start on a right-hand page (creates blank pages where necessary)
+]{Manual} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{lipsum}
+\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{amsmath} % Math Package - db
+\usepackage{pdfpages} % For picture quote page - db
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=letterpaper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=2.5cm, % Outer margin
+	%bindingoffset=.5cm, % Binding offset
+	top=2.5cm, % Top margin
+	bottom=2.5cm, % Bottom margin
+	head=21.986pt,
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	MANUAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\manualtitle{HANDi-Hand Assembly Manual} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\author{Dylan J. A. \textsc{Brenneis}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+}
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\begin{figure}
+\includegraphics[width=0.7\linewidth]{Figures/Handi hand Logo.png}
+\end{figure}
+
+\begin{flushright}
+\null
+\vfill
+{\Huge \bfseries \ttitle\par}\vspace{0.6cm} % Manual title
+
+
+\href{http://www.dylanbrenneis.ca}{Dylan J. A. Brenneis}\\%\authorname} % Author name - remove the \href bracket to remove the link
+August 2020
+\end{flushright}
+\end{titlepage}
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\setcounter{page}{2}
+\addchaptertocentry{Introduction} % Add the abstract to the table of contents
+The HANDi Hand is an open-source robotic platform specifically designed for machine learning research in prosthetic control. The inexpensive and easily modifiable hardware allows versatility for research studies, and the suite of sensors provides valuable information for machine learning and prosthetics research.
+
+The open-source release provides all solid-modelling files, .stl files, Arduino code, and assembly instruction required to construct a fully functional HANDi Hand, and should also give the maker enough flexibility to make alterations to the design as necessary to suit their own needs. Both left and right hand versions are available. To contact the original designers, or to receive support for your build, please visit BLINCdev.ca.
+
+This assembly manual outlines all the information required to print and source parts, and assemble the HANDi Hand as currently designed. The hand takes an estimated 30 hours to build.
+
+\end{abstract}
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+\listoftables % Prints the list of tables
+
+\listoffigures % Prints the list of figures
+
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+\newpage
+\addchaptertocentry{Glossary of Terms}
+\noindent\textbf{\Huge{Glossary of Terms}}
+\vspace{1cm}
+
+\noindent\textbf{Digits}: The digits are referred to by standard numbering, beginning with the thumb as D1 as shown in Figure~\ref{fig:finger_nums}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\linewidth]{Figures/Finger_Numbering.png}
+\caption{Numbering scheme used for finger naming.}
+\label{fig:finger_nums}
+\end{figure}
+\noindent\textbf{Joints}: The joints are named in accordance with Figure~\ref{fig:joint_nums}. The names are constructed first with a digit indicator (i.e. D2) followed by a joint indicator D, I or P, indicating distal, intermediate, or proximal respectively. Potentiometers are named for the joints that they measure. The digit D0 refers to thumb rotation.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\linewidth]{Figures/Joint_Numbering.png}
+\caption{Numbering scheme used for joint naming.}
+\label{fig:joint_nums}
+\end{figure}
+
+\noindent\textbf{Finger Parts}: Each phalanx of the finger is made up of multiple parts. The part names are contrived according to the following convention:
+\begin{enumerate}
+\item Phalanx indicator. PP = Proximal Phalanx, IP = Intermediate Phalanx, DP = Distal Phalanx, MC = Metacarpal
+\item Part position indicator. P = Proximal, D = Distal
+\item Position modifier. There are sometimes multiple parts in the same location that must be differentiated by their function (pivot, main, lock, tip, etc).
+\item Handedness indicator. R = Right Hand, L = Left Hand
+\end{enumerate}
+An example part name would be \textbf{IP-P Pivot R}, for the proximal portion of the intermediate phalanx corresponding to the pivot, for the right-hand version of the HANDi Hand.
+\newpage
+
+
+%----------------------------------------------------------------------------------------
+%	MAIN CONTENT - STEPS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+% Include the steps of assembly as separate files from the Steps folder
+% Uncomment the lines as you write the chapters
+
+%\include{Steps/Step1}
+
+
+%----------------------------------------------------------------------------------------
+%	MANUAL CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+%\include{Appendices/AppendixA}
+%\include{Appendices/AppendixB}
+%\include{Appendices/AppendixC}
+
+
+\end{document}  
