@@ -1,3 +1,6 @@
+/.gitignore
+/Assembly_Manual/.Assembly_Manual.tex.swp
+/Assembly_Manual/.log
 /Assembly_Manual/main.log
 /Assembly_Manual/main.toc
 /Assembly_Manual/main.aux
