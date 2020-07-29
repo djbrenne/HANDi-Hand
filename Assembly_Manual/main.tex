@@ -56,7 +56,12 @@ openany, % Comment out to have chapters, acknowledgements, etc. always start on 
 \floatstyle{plaintop}
 \restylefloat{table}
 \usepackage{longtable}
-
+\usepackage{multicol}
+%\usepackage{lscape}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+\usepackage{pdflscape}
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -104,7 +109,7 @@ openany, % Comment out to have chapters, acknowledgements, etc. always start on 
 \null
 \vfill
 {\Huge \bfseries \ttitle\par}\vspace{0.6cm} % Manual title
-
+\Large{\textit{Version 2.0}}
 
 \href{http://www.dylanbrenneis.ca}{Dylan J. A. Brenneis}\\%\authorname} % Author name - remove the \href bracket to remove the link
 August 2020
@@ -119,14 +124,20 @@ August 2020
 \begin{abstract}
 \setcounter{page}{2}
 \addchaptertocentry{Introduction} % Add the abstract to the table of contents
-The HANDi Hand is an open-source robotic platform specifically designed for machine learning research in prosthetic control. The inexpensive and easily modifiable hardware allows versatility for research studies, and the suite of sensors provides valuable information for machine learning and prosthetics research.
-
-The open-source release provides all solid-modelling files, .stl files, Arduino code, and assembly instruction required to construct a fully functional HANDi Hand, and should also give the maker enough flexibility to make alterations to the design as necessary to suit their own needs. Both left and right hand versions are available. To contact the original designers, or to receive support for your build, please visit  \href{https://blincdev.ca/}{BLINCdev.ca}.
+The HANDi Hand is an open-source robotic platform specifically designed for machine learning research in prosthetic control. The inexpensive and easily modifiable hardware allows versatility for research studies, and the suite of sensors provides valuable information for machine learning and prosthetics research. 
 
 This assembly manual outlines all the information required to print and source parts, and assemble the HANDi Hand as currently designed. The hand takes an estimated 30 hours to build.
 
-\vfill
-\flushright{\textit{\small{The HANDi Hand was originally released in August 2017, as published in MEC '17}}}
+The open-source release provides all solid-modelling files, .stl files, Arduino code, and assembly instruction required to construct a fully functional HANDi Hand, and should also give the maker enough flexibility to make alterations to the design as necessary to suit their own needs. Both left and right hand versions are available. To contact the original designers, or to receive support for your build, please visit  \href{https://blincdev.ca/}{BLINCdev.ca}.
+\section*{Version 2.0 Updates}
+The HANDi Hand was originally released in August 2017.\footnote{D. J. A. Brenneis, M. R. Dawson, P. M. Pilarski, “\href{https://sites.ualberta.ca/~pilarski/docs/papers/Brenneis_2017_MEC_preprint.pdf}{Development of the HANDi Hand: An Inexpensive, Multi-Articulating, Sensorized Hand for Machine Learning Research in Myoelectric Control},” Proc. of MEC’17: Myoelectric Controls Symposium, Fredericton, New Brunswick, August 15-18, 2017.} This updated assembly manual includes a number of changes that lower the overall cost and increase the ease of building the hand, as well as compensating for the discontinuation of the previous servo-motors. The hand's performance characteristics remain similar to that published in MEC '17. The main changes include:
+\begin{itemize}
+\item Redesign for Dymond D47 servos
+\item Design of in-wrist PCB
+\item Redesign for smaller, more inexpensive camera
+\item Update specifications for UV-resistant zip-tie cables
+\item More comprehensive build documentation, including assembly videos
+\end{itemize}
 \end{abstract}
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES

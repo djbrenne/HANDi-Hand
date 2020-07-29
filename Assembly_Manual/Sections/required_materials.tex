@@ -49,31 +49,12 @@ Servo Spur Gear &0.1 mm layer, 10\% infill &0h 5m &1 g  \\ \hline
 
 \section{Off-The-Shelf Parts}
 The table below contains all the off-the-shelf parts required for building a complete HANDi Hand. Additional ordering information is provided in Appendix \ref{AppendixA}.
-
-\begin{longtable}[l]{| p{6cm}|  p{7cm} |  p{2cm} |}
-
- \caption{Off-the-Shelf Parts Specifications.\label{ots_parts_table}}\\
-
- \hline 
- \textbf{Item} & \textbf{Part Number} & \textbf{QTY}\\ \hline
- \endfirsthead
-
- \hline
- \multicolumn{3}{|c|}{Continuation of Table \ref{long}}\\
- \hline
-  \textbf{Item} & \textbf{Part Number} & \textbf{QTY}\\
- \hline
- \endhead
-
- \hline
- \endfoot
-
- \hline
- \multicolumn{3}{| c |}{End of Table}\\
- \hline\hline
- \endlastfoot
+\begin{table}[H]
+\centering
+\caption{Off-the-Shelf Parts Specifications.\label{ots_parts_table}}
+\begin{tabular}{| p{6cm}|  p{7cm} |  p{2cm} |}
 \hline
-\multicolumn{3}{| l |}{SENSORS AND ELECTRONICS}\\ \hline \hline
+ \textbf{Item} & \textbf{Part Number} & \textbf{QTY}\\ \hline
 Rotary position sensor & MuRata SV03A103AEA01R00 & 9 \\ \hline
 Force sensitive resistor & Interlink Electronics 34-00004 & 5 \\ \hline
 Arduino Mega & Arduino A000067 & 1 \\ \hline
@@ -87,8 +68,34 @@ DC barrel jack adapter (female) & Sparkfun PRT-10288 &  1 \\ \hline
 Heat shrink tubing, assorted & Sparkfun PRT-09353 & 1 \\ \hline
 Analog RC servo motor & Dymond D47 & 6 \\ \hline
 USB Webcam & Microsoft LifeCam HD-3000 & 1 \\ \hline
-
-
- \end{longtable}
+Textured Neoprene Rubber & McMaster-Carr 8445K61 & 1 \\ \hline
+Continuous Flex Wire, 26 AWG & McMaster-Carr 7071K19 & 50 feet \\ \hline
+M2 x 25 mm Cheese Head Slotted Machine Screw & McMaster-Carr 91800A023	& 23 \\ \hline
+M2 18-8 Washer & McMaster-Carr 93475A195 & 16 \\ \hline
+5.9" Zip-Tie & Qualtek 17-M150N-C & 9 \\ \hline
+\end{tabular}
+\end{table}
 
 \section{Tools}
+\begin {multicols}{2}
+[
+The following tools are required during assembly.]
+\begin{itemize}
+\item 3D printer
+\item M2 screw cutter (or bolt cutters and large flat metal file)
+\item Dremel tool with sanding wheel
+\item 120 grit sandpaper
+\item Small files
+\item Narrow flat screwdriver
+\item \#0 Philips screwdriver
+\item Wire strippers / cutters
+\item Soldering iron and solder
+\item Heat gun
+\item Hobby knife
+\item Fine tweezers
+\item Needlenose pliers
+\end{itemize}
+\end{multicols}
+
+\section{Printed Circuit Board}
+A custom in-wrist printed circuit board (PCB) has been designed to handle signal and power routing in and out of the hand. The EAGLE files for the PCB are available in the \href{https://github.com/BLINCdev/HANDi-Hand}{HANDi-Hand release repository.} Documentation regarding how to order a PCB from a board manufacturer using these files can also be found in the same location.
