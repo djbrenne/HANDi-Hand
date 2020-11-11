@@ -15,7 +15,55 @@
 \section{Potentiometers}
 \textit{Estimated time 1h 45m}
 
+In the current version, there are nine potentiometers (limited due to the number of analog input pins on the Arduino Mega). The suggested lengths of the connecting wires are found in Table \ref{potentiometer_table}.
+
+\begin{table}[H]
+\centering
+\caption{Suggested wire lengths for potentiometers}
+\label{potentiometer_table}
+\begin{tabular}{| l | l |}
+\hline
+\textbf{Potentiometer ID} & \textbf{Suggested Wire Length}  \\ \hline
+D0 & 150 mm \\ \hline
+D1P & 150 mm \\ \hline
+D1D & 190 mm \\ \hline
+D2P & 150 mm \\ \hline
+D2I & 190 mm \\ \hline
+D3P & 150 mm \\ \hline
+D3I & 190 mm \\ \hline
+D4P & 150 mm \\ \hline
+D5P & 150 mm \\ \hline
+\end{tabular}
+\end{table} 
+
+Figure \ref{pot_pins} describes the polarity of the potentiometers. To prepare the potentiomters:
+
+\begin{enumerate}
+\item Cut off the top lone pin on the potentiometer as short as possible.
+\item Solder the wires to the potentiometer and a straight pin header to the other end of each wire. See note below about D0.
+\item Use black heat-shrink on the connections near the potentiometer, and coloured heat shrink on the far connections corresponding to the polarity noted in Figure 7.
+\item Heat shrink the 3 wires together near the loose end using a light coloured heat shrink tubing. Label the wires here with the potentiometer ID.
+\end{enumerate}
+\textbf{Note:}  the straight pin headers for the D0 potentiometer must be soldered to the wires \textit{after} the potentiometer is installed in MC – Geared Rotator, and the wires routed through the narrow channel. Black heat-shrink tubing near the potentiometer will not fit in this channel, so it is omitted. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\linewidth]{Figures/Pot_Pins.png}
+\caption{Potentiometer terminals diagram, viewed from the top (black side facing you). Pin \#1 is GND, pins labelled \#2 are SIG, and pin \#3 is VCC.}
+\label{pot_pins}
+\end{figure}
+
+
 \section{FSRs}
 \textit{Estimated time 1h 0m}
+
+Each fingertip requires an FSR. The recommended wire length for finger FSRs is 250 mm; for the thumb FSR 200 mm is recommended. 
+\begin{enumerate}
+\item Solder each wire to the solder tabs of the FSR. 
+\item Install FSR in fingertip (see 5.3.1 ).
+\item Use black heat-shrink tubing on the connections near the FSR.
+\item Solder the wires to straight pin headers.
+\item Use yellow and red heat shrink tubing on the connections with the straight pin headers.
+\item Heat shrink the two wires together using a light coloured heat shrink, and label the wires here with the ID of the finger they represent.
+\end{enumerate}
 
 \section{Screws}
